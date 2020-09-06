@@ -1,0 +1,27 @@
+﻿<Window x:Class="claculate.page2"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:claculate"
+        mc:Ignorable="d"
+        Title="page2" Height="450" Width="800"
+        Closing="Window_Closing" >
+    <Grid>
+        <Button Content="刪除" HorizontalAlignment="Left" Margin="643,10,0,0" VerticalAlignment="Top" Width="141" Height="70" Click="Button_Click_1"/>
+        <Button Content="返回" HorizontalAlignment="Left" Margin="643,158,0,0" VerticalAlignment="Top" Width="141" Height="75" Click="Button_Click"/>
+        <ListView Name="listview" HorizontalAlignment="Left" Height="400" Margin="0,10,0,0" VerticalAlignment="Top" Width="638" SelectionChanged="listview_SelectionChanged">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="Expression" Width="150" DisplayMemberBinding="{Binding Expression}"/>
+                    <GridViewColumn Header="Preorder" Width="150" DisplayMemberBinding="{Binding Preorder}"/>
+                    <GridViewColumn Header="Postorder" Width="150" DisplayMemberBinding="{Binding Postorder}"/>
+                    <GridViewColumn Header="Decimal" Width="70" DisplayMemberBinding="{Binding Decimal}"/>
+                    <GridViewColumn Header="Binary" Width="100" DisplayMemberBinding="{Binding Binary}"/>
+                   
+                </GridView>
+            </ListView.View>
+        </ListView>
+
+    </Grid>
+</Window>
